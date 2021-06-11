@@ -2,10 +2,6 @@
 
 A stateless Microservice API
 
-```
-- The online version of the swagger Api documentation is avaliable at \api-docs for testing.
-```
-
 ### Content
 
 - User login with any name and password
@@ -21,7 +17,7 @@ A stateless Microservice API
 ## POST login
 
 ```
-http://localhost:5009/api/login
+http://localhost:4000/api/login
 ```
 
 - Login a user with any username and password combination
@@ -34,8 +30,8 @@ BODY raw
 
 ```
 {
-"username": "ikhide",
-"password" : "pass"
+"username": "Ovie",
+"password" : "password"
 }
 ```
 
@@ -45,8 +41,8 @@ Example Request
 
 ```
 --data-raw '{
-"username": "ikhide",
-"password" : "pass"
+"username": "Ovie",
+"password" : "password"
 }'
 ```
 
@@ -64,7 +60,7 @@ Success Response
 ## POST image_thumbnail
 
 ```
-http://localhost:5009/api/thumbnail
+http://localhost:4000/api/thumbnail
 ```
 
 - Endpoint to create image thumbnail from a public image URL
@@ -101,7 +97,7 @@ image thumbnail example
 ```
 
 ```
-curl --location --request POST 'http://localhost:5009/api/thumbnail' \
+curl --location --request POST 'http://localhost:4000/api/thumbnail' \
 --header 'Content-Type: application/json' \
 ```
 
@@ -132,7 +128,7 @@ Example Response
 ## PATCH json-patch
 
 ```
-http://localhost:5009/api/json-patch
+http://localhost:4000/api/json-patch
 ```
 
 - Api endpoint to json-patch will return a patched json object
@@ -158,7 +154,7 @@ json patch example request
 
 ```
 json-patch example
-curl --location --request PATCH 'http://localhost:5009/api/json-patch' \
+curl --location --request PATCH 'http://localhost:4000/api/json-patch' \
 --header 'Content-Type: application/json' \
 ```
 
@@ -191,7 +187,7 @@ Example Response
 ## GET Logs
 
 ```
-http://localhost:5009/api/log"
+http://localhost:4000/api/log"
 ```
 
 - Api endpoint to logs will return the logs of all request made to endpoints
@@ -217,7 +213,7 @@ request logs example
 ```
 
 ```
-curl --location --request GET 'http://localhost:5009/api/log' \
+curl --location --request GET 'http://localhost:4000/api/log' \
 --header 'Content-Type: application/json' \
 
 ```
@@ -230,7 +226,7 @@ Example Response
 ```
 {"message":"::1 - - [10/Nov/2020:09:36:39 +0000] \"POST /api/login HTTP/1.1\" 200 212 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 {"message":"::1 - - [10/Nov/2020:09:37:12 +0000] \"GET /api-docs HTTP/1.1\" 301 183 \"-\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
-{"message":"::1 - - [10/Nov/2020:09:37:12 +0000] \"GET /api-docs/ HTTP/1.1\" 200 3104 \"http://localhost:5009/api-docs\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
+{"message":"::1 - - [10/Nov/2020:09:37:12 +0000] \"GET /api-docs/ HTTP/1.1\" 200 3104 \"http://localhost:4000/api-docs\" \"PostmanRuntime/7.26.8\"\n","level":"info"}
 ```
 
 ```
